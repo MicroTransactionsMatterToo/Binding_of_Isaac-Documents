@@ -1,1 +1,2 @@
 format = 'lunamark'
+dir = 'docs'
