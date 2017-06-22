@@ -1,5 +1,5 @@
 ## Binding of Isaac: Afterbirth+ Documentation
-### Link to actual docs: [https://microtransactionsmattertoo.github.io/Binding_of_Isaac-Documents/index.html]
+### Link to actual docs: [here](https://microtransactionsmattertoo.github.io/Binding_of_Isaac-Documents/index.html)
 
 As the provided documentation for TBoI is far from satisfactory, or useful, I have decided to document it myself.
 
