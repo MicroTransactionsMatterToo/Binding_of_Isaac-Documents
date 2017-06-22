@@ -1,0 +1,798 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Metamethods">Metamethods</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><strong>Vector</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Entity.html">Entity</a></li>
+  <li><a href="../modules/Isaac.html">Isaac</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Vector</code></h1>
+<p>Vector type</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Author</strong>: Ennis Massey</li>
+    </ul>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Vector.__propget">Vector.__propget</a></td>
+	<td class="summary">Contains properties of the Vector type</td>
+	</tr>
+</table>
+<h2><a href="#Metamethods">Metamethods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__call">Vector:__call (x, y)</a></td>
+	<td class="summary">Constructs a new Vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__add">Vector:__add (Right)</a></td>
+	<td class="summary">Addition metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__sub">Vector:__sub (Right)</a></td>
+	<td class="summary">Subtraction metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__unm">Vector:__unm ()</a></td>
+	<td class="summary">Unary minus (negation) metamethod, allows negation of a <a href="../classes/Vector.html#">Vector</a></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__div">Vector:__div (Modifier)</a></td>
+	<td class="summary">Division metamethod, allows division of one <a href="../classes/Vector.html#">Vector</a> by a float</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__mul">Vector:__mul (Modifier)</a></td>
+	<td class="summary">Multiplication metamethod, allows multiplication of one <a href="../classes/Vector.html#">Vector</a> by a float</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Normalize">Vector:Normalize ()</a></td>
+	<td class="summary">Normalises the given Vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Normalized">Vector:Normalized ()</a></td>
+	<td class="summary">Returns the Vector, normalised</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Dot">Vector:Dot (second)</a></td>
+	<td class="summary">Returns the Dot product (Scalar) of two vectors</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Cross">Vector:Cross (second)</a></td>
+	<td class="summary">Returns the Cross product of two vectors This is entirely useless, as it returns the <em>Z</em> coordinate, or height, which cannot be used.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Lerp">Vector:Lerp (first, second, t)</a></td>
+	<td class="summary">Returns a lerped version of the two vectors Doesn’t seem to work, always returns nil</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Clamp">Vector:Clamp (MinX, MinY, MaxX, MaxY)</a></td>
+	<td class="summary">Clamps the vector based on given boundings.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Clamped">Vector:Clamped (MinX, MinY, MaxX, MaxY)</a></td>
+	<td class="summary">Returns the clamped version of the current <a href="../classes/Vector.html#">Vector</a></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Distance">Vector:Distance (second)</a></td>
+	<td class="summary">Returns the distance between two <a href="../classes/Vector.html#">Vector</a>’s</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:DistanceSquared">Vector:DistanceSquared (second)</a></td>
+	<td class="summary">Returns the squared distance between two <a href="../classes/Vector.html#">Vector</a>’s</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:FromAngle">Vector:FromAngle (AngleDegrees)</a></td>
+	<td class="summary">Constructs a Vector from a given angle</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:GetAngleDegrees">Vector:GetAngleDegrees ()</a></td>
+	<td class="summary">Returns the angle the vector is facing</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Length">Vector:Length ()</a></td>
+	<td class="summary">Returns the length of the vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:LengthSquared">Vector:LengthSquared ()</a></td>
+	<td class="summary">Returns the length squared of the vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Resize">Vector:Resize (NewLength)</a></td>
+	<td class="summary">Resizes a vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Resized">Vector:Resized (NewLength)</a></td>
+	<td class="summary">Returns a resized vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:Rotated">Vector:Rotated (AngleDegrees)</a></td>
+	<td class="summary">Returns a rotated version of the Vector</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Vector.__propget"></a>
+    <strong>Vector.__propget</strong>
+    </dt>
+    <dd>
+    Contains properties of the Vector type
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">X</span>
+        X coordinates of <a href="../classes/Vector.html#">Vector</a>
+        </li>
+        <li><span class="parameter">Y</span>
+        Y coordinates of <a href="../classes/Vector.html#">Vector</a>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Metamethods"></a>Metamethods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Vector:__call"></a>
+    <strong>Vector:__call (x, y)</strong>
+    </dt>
+    <dd>
+    Constructs a new Vector
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">float</span></span>
+        X coordinate the Vector represents
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">float</span></span>
+        Y coordinate the Vector represents
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        new vector
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> spawnPosition = Vector(<span class="number">0</span>, <span class="number">20</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__add"></a>
+    <strong>Vector:__add (Right)</strong>
+    </dt>
+    <dd>
+    Addition metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Right</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Vector to add
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        result of addition
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">0</span>,<span class="number">0</span>) + Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__sub"></a>
+    <strong>Vector:__sub (Right)</strong>
+    </dt>
+    <dd>
+    Subtraction metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Right</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Vector to subtract
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        result of subtraction
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">0</span>,<span class="number">0</span>) - Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__unm"></a>
+    <strong>Vector:__unm ()</strong>
+    </dt>
+    <dd>
+    Unary minus (negation) metamethod, allows negation of a <a href="../classes/Vector.html#">Vector</a>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        negated vector
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">-Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__div"></a>
+    <strong>Vector:__div (Modifier)</strong>
+    </dt>
+    <dd>
+    Division metamethod, allows division of one <a href="../classes/Vector.html#">Vector</a> by a float
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Modifier</span>
+            <span class="types"><span class="type">float</span></span>
+        Number to divide by
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">2</span>, <span class="number">2</span>) / <span class="number">2</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__mul"></a>
+    <strong>Vector:__mul (Modifier)</strong>
+    </dt>
+    <dd>
+    Multiplication metamethod, allows multiplication of one <a href="../classes/Vector.html#">Vector</a> by a float
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Modifier</span>
+            <span class="types"><span class="type">float</span></span>
+        Number to multiply by
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">2</span>, <span class="number">2</span>) * <span class="number">2</span></pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Vector:Normalize"></a>
+    <strong>Vector:Normalize ()</strong>
+    </dt>
+    <dd>
+    Normalises the given Vector <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span></span>
+        nil
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Normalized"></a>
+    <strong>Vector:Normalized ()</strong>
+    </dt>
+    <dd>
+    Returns the Vector, normalised <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Normalised Vector
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Dot"></a>
+    <strong>Vector:Dot (second)</strong>
+    </dt>
+    <dd>
+    Returns the Dot product (Scalar) of two vectors <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">second</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Second vector in the dot product equation
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float</span></span>
+        dot product of the two <a href="../classes/Vector.html#">Vector</a> &#39;s
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Cross"></a>
+    <strong>Vector:Cross (second)</strong>
+    </dt>
+    <dd>
+    <p>Returns the Cross product of two vectors This is entirely useless, as it returns the <em>Z</em> coordinate, or height, which cannot be used. </p>
+
+<strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">second</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Second vector in the cross product equation
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Lerp"></a>
+    <strong>Vector:Lerp (first, second, t)</strong>
+    </dt>
+    <dd>
+    Returns a lerped version of the two vectors Doesn’t seem to work, always returns nil <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">first</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        first vector in calculation
+        </li>
+        <li><span class="parameter">second</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        second vector in calculation
+        </li>
+        <li><span class="parameter">t</span>
+            <span class="types"><span class="type">float</span></span>
+        percentage to multiply vectors by
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Clamp"></a>
+    <strong>Vector:Clamp (MinX, MinY, MaxX, MaxY)</strong>
+    </dt>
+    <dd>
+    <p>Clamps the vector based on given boundings. Direction is not kept</p>
+
+<strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">MinX</span>
+            <span class="types"><span class="type">float</span></span>
+        Minimum X bounding
+        </li>
+        <li><span class="parameter">MinY</span>
+            <span class="types"><span class="type">float</span></span>
+        Minimum Y bounding
+        </li>
+        <li><span class="parameter">MaxX</span>
+            <span class="types"><span class="type">float</span></span>
+        Maximum X bounding
+        </li>
+        <li><span class="parameter">MaxY</span>
+            <span class="types"><span class="type">float</span></span>
+        Maximum Y bounding
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tempVector = Vector(<span class="number">30</span>, <span class="number">20</span>)
+tempVector:Clamp(<span class="number">0</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="number">10</span>)
+tempVector == Vector(<span class="number">20</span>, <span class="number">10</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:Clamped"></a>
+    <strong>Vector:Clamped (MinX, MinY, MaxX, MaxY)</strong>
+    </dt>
+    <dd>
+    Returns the clamped version of the current <a href="../classes/Vector.html#">Vector</a> <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">MinX</span>
+            <span class="types"><span class="type">float</span></span>
+        Minimum X bounding
+        </li>
+        <li><span class="parameter">MinY</span>
+            <span class="types"><span class="type">float</span></span>
+        Minimum Y bounding
+        </li>
+        <li><span class="parameter">MaxX</span>
+            <span class="types"><span class="type">float</span></span>
+        Maximum X bounding
+        </li>
+        <li><span class="parameter">MaxY</span>
+            <span class="types"><span class="type">float</span></span>
+        Maximum Y bounding
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        clamped vector
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tempVector = Vector(<span class="number">30</span>, <span class="number">20</span>)
+<span class="keyword">local</span> newTemp = tempVector:Clamp(<span class="number">0</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="number">10</span>)
+newTempVector == Vector(<span class="number">20</span>, <span class="number">10</span>)
+tempVector == Vector(<span class="number">30</span>, <span class="number">20</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:Distance"></a>
+    <strong>Vector:Distance (second)</strong>
+    </dt>
+    <dd>
+    Returns the distance between two <a href="../classes/Vector.html#">Vector</a>’s <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">second</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        second vector
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">2</span>,<span class="number">0</span>):Distance(Vector(<span class="number">0</span>,<span class="number">2</span>)) == <span class="number">2</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:DistanceSquared"></a>
+    <strong>Vector:DistanceSquared (second)</strong>
+    </dt>
+    <dd>
+    Returns the squared distance between two <a href="../classes/Vector.html#">Vector</a>’s <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">second</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        second vector
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">2</span>,<span class="number">0</span>):DistanceSquared(Vector(<span class="number">0</span>,<span class="number">2</span>)) == <span class="number">8</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:FromAngle"></a>
+    <strong>Vector:FromAngle (AngleDegrees)</strong>
+    </dt>
+    <dd>
+    Constructs a Vector from a given angle <strong>This is a static method, it cannot be called from an instance of <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">AngleDegrees</span>
+            <span class="types"><span class="type">float</span></span>
+        Angle in degrees to use when creating Vector
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:GetAngleDegrees"></a>
+    <strong>Vector:GetAngleDegrees ()</strong>
+    </dt>
+    <dd>
+    Returns the angle the vector is facing <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float</span></span>
+        Angle
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Length"></a>
+    <strong>Vector:Length ()</strong>
+    </dt>
+    <dd>
+    Returns the length of the vector <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float</span></span>
+        the length of the vector
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:LengthSquared"></a>
+    <strong>Vector:LengthSquared ()</strong>
+    </dt>
+    <dd>
+    Returns the length squared of the vector <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float</span></span>
+        squared length of the vector
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Resize"></a>
+    <strong>Vector:Resize (NewLength)</strong>
+    </dt>
+    <dd>
+    Resizes a vector <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">NewLength</span>
+            <span class="types"><span class="type">float</span></span>
+        new length for vector
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Resized"></a>
+    <strong>Vector:Resized (NewLength)</strong>
+    </dt>
+    <dd>
+    Returns a resized vector <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">NewLength</span>
+            <span class="types"><span class="type">float</span></span>
+        new length for vector
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        resized vector
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Vector:Rotated"></a>
+    <strong>Vector:Rotated (AngleDegrees)</strong>
+    </dt>
+    <dd>
+    Returns a rotated version of the Vector <strong>This is an instance only method, it cannot be called directly from <a href="../classes/Vector.html#">Vector</a></strong>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">AngleDegrees</span>
+            <span class="types"><span class="type">float</span></span>
+        angle to rotate by
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        rotated vector
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-06-22 19:28:25 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
