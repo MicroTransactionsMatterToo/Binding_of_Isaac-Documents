@@ -33,18 +33,19 @@
 <h2>Contents</h2>
 <ul>
 <li><a href="#Tables">Tables</a></li>
-<li><a href="#Metamethods">Metamethods</a></li>
 <li><a href="#Methods">Methods</a></li>
+<li><a href="#Metamethods">Metamethods</a></li>
 </ul>
 
 
 <h2>Classes</h2>
 <ul class="nowrap">
+  <li><a href="../classes/Entity.html">Entity</a></li>
   <li><strong>Vector</strong></li>
 </ul>
 <h2>Modules</h2>
 <ul class="nowrap">
-  <li><a href="../modules/Entity.html">Entity</a></li>
+  <li><a href="../modules/Enumerations.html">Enumerations</a></li>
   <li><a href="../modules/Isaac.html">Isaac</a></li>
 </ul>
 
@@ -66,33 +67,6 @@
 	<tr>
 	<td class="name" nowrap><a href="#Vector.__propget">Vector.__propget</a></td>
 	<td class="summary">Contains properties of the Vector type</td>
-	</tr>
-</table>
-<h2><a href="#Metamethods">Metamethods</a></h2>
-<table class="function_list">
-	<tr>
-	<td class="name" nowrap><a href="#Vector:__call">Vector:__call (x, y)</a></td>
-	<td class="summary">Constructs a new Vector</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Vector:__add">Vector:__add (Right)</a></td>
-	<td class="summary">Addition metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Vector:__sub">Vector:__sub (Right)</a></td>
-	<td class="summary">Subtraction metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Vector:__unm">Vector:__unm ()</a></td>
-	<td class="summary">Unary minus (negation) metamethod, allows negation of a <a href="../classes/Vector.html#">Vector</a></td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Vector:__div">Vector:__div (Modifier)</a></td>
-	<td class="summary">Division metamethod, allows division of one <a href="../classes/Vector.html#">Vector</a> by a float</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Vector:__mul">Vector:__mul (Modifier)</a></td>
-	<td class="summary">Multiplication metamethod, allows multiplication of one <a href="../classes/Vector.html#">Vector</a> by a float</td>
 	</tr>
 </table>
 <h2><a href="#Methods">Methods</a></h2>
@@ -162,6 +136,33 @@
 	<td class="summary">Returns a rotated version of the Vector</td>
 	</tr>
 </table>
+<h2><a href="#Metamethods">Metamethods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__call">Vector:__call (x, y)</a></td>
+	<td class="summary">Constructs a new Vector</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__add">Vector:__add (Right)</a></td>
+	<td class="summary">Addition metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__sub">Vector:__sub (Right)</a></td>
+	<td class="summary">Subtraction metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__unm">Vector:__unm ()</a></td>
+	<td class="summary">Unary minus (negation) metamethod, allows negation of a <a href="../classes/Vector.html#">Vector</a></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__div">Vector:__div (Modifier)</a></td>
+	<td class="summary">Division metamethod, allows division of one <a href="../classes/Vector.html#">Vector</a> by a float</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vector:__mul">Vector:__mul (Modifier)</a></td>
+	<td class="summary">Multiplication metamethod, allows multiplication of one <a href="../classes/Vector.html#">Vector</a> by a float</td>
+	</tr>
+</table>
 
 <br/>
 <br/>
@@ -191,181 +192,6 @@
 
 
 
-
-</dd>
-</dl>
-    <h2 class="section-header "><a name="Metamethods"></a>Metamethods</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "Vector:__call"></a>
-    <strong>Vector:__call (x, y)</strong>
-    </dt>
-    <dd>
-    Constructs a new Vector
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">float</span></span>
-        X coordinate the Vector represents
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">float</span></span>
-        Y coordinate the Vector represents
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
-        new vector
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="keyword">local</span> spawnPosition = Vector(<span class="number">0</span>, <span class="number">20</span>)</pre>
-    </ul>
-
-</dd>
-    <dt>
-    <a name = "Vector:__add"></a>
-    <strong>Vector:__add (Right)</strong>
-    </dt>
-    <dd>
-    Addition metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">Right</span>
-            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
-        Vector to add
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
-        result of addition
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example">Vector(<span class="number">0</span>,<span class="number">0</span>) + Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
-    </ul>
-
-</dd>
-    <dt>
-    <a name = "Vector:__sub"></a>
-    <strong>Vector:__sub (Right)</strong>
-    </dt>
-    <dd>
-    Subtraction metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">Right</span>
-            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
-        Vector to subtract
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
-        result of subtraction
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example">Vector(<span class="number">0</span>,<span class="number">0</span>) - Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
-    </ul>
-
-</dd>
-    <dt>
-    <a name = "Vector:__unm"></a>
-    <strong>Vector:__unm ()</strong>
-    </dt>
-    <dd>
-    Unary minus (negation) metamethod, allows negation of a <a href="../classes/Vector.html#">Vector</a>
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
-        negated vector
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example">-Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
-    </ul>
-
-</dd>
-    <dt>
-    <a name = "Vector:__div"></a>
-    <strong>Vector:__div (Modifier)</strong>
-    </dt>
-    <dd>
-    Division metamethod, allows division of one <a href="../classes/Vector.html#">Vector</a> by a float
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">Modifier</span>
-            <span class="types"><span class="type">float</span></span>
-        Number to divide by
-        </li>
-    </ul>
-
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example">Vector(<span class="number">2</span>, <span class="number">2</span>) / <span class="number">2</span></pre>
-    </ul>
-
-</dd>
-    <dt>
-    <a name = "Vector:__mul"></a>
-    <strong>Vector:__mul (Modifier)</strong>
-    </dt>
-    <dd>
-    Multiplication metamethod, allows multiplication of one <a href="../classes/Vector.html#">Vector</a> by a float
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">Modifier</span>
-            <span class="types"><span class="type">float</span></span>
-        Number to multiply by
-        </li>
-    </ul>
-
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example">Vector(<span class="number">2</span>, <span class="number">2</span>) * <span class="number">2</span></pre>
-    </ul>
 
 </dd>
 </dl>
@@ -785,13 +611,188 @@ tempVector == Vector(<span class="number">30</span>, <span class="number">20</sp
 
 </dd>
 </dl>
+    <h2 class="section-header "><a name="Metamethods"></a>Metamethods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Vector:__call"></a>
+    <strong>Vector:__call (x, y)</strong>
+    </dt>
+    <dd>
+    Constructs a new Vector
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">float</span></span>
+        X coordinate the Vector represents
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">float</span></span>
+        Y coordinate the Vector represents
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        new vector
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> spawnPosition = Vector(<span class="number">0</span>, <span class="number">20</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__add"></a>
+    <strong>Vector:__add (Right)</strong>
+    </dt>
+    <dd>
+    Addition metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Right</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Vector to add
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        result of addition
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">0</span>,<span class="number">0</span>) + Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__sub"></a>
+    <strong>Vector:__sub (Right)</strong>
+    </dt>
+    <dd>
+    Subtraction metamethod, allows addition of one <a href="../classes/Vector.html#">Vector</a> to another
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Right</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        Vector to subtract
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        result of subtraction
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">0</span>,<span class="number">0</span>) - Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__unm"></a>
+    <strong>Vector:__unm ()</strong>
+    </dt>
+    <dd>
+    Unary minus (negation) metamethod, allows negation of a <a href="../classes/Vector.html#">Vector</a>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        negated vector
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">-Vector(<span class="number">0</span>,<span class="number">2</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__div"></a>
+    <strong>Vector:__div (Modifier)</strong>
+    </dt>
+    <dd>
+    Division metamethod, allows division of one <a href="../classes/Vector.html#">Vector</a> by a float
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Modifier</span>
+            <span class="types"><span class="type">float</span></span>
+        Number to divide by
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">2</span>, <span class="number">2</span>) / <span class="number">2</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Vector:__mul"></a>
+    <strong>Vector:__mul (Modifier)</strong>
+    </dt>
+    <dd>
+    Multiplication metamethod, allows multiplication of one <a href="../classes/Vector.html#">Vector</a> by a float
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Modifier</span>
+            <span class="types"><span class="type">float</span></span>
+        Number to multiply by
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Vector(<span class="number">2</span>, <span class="number">2</span>) * <span class="number">2</span></pre>
+    </ul>
+
+</dd>
+</dl>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2017-06-22 19:31:17 </i>
+<i style="float:right;">Last updated 2017-06-23 08:07:14 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

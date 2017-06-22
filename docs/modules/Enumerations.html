@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>Enumerations</strong></li>
+  <li><a href="../modules/Isaac.html">Isaac</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Entity.html">Entity</a></li>
+  <li><a href="../classes/Vector.html">Vector</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Enumerations</code></h1>
+<p>Various enumerations available for use in the API</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Author</strong>: Ennis Massey</li>
+    </ul>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ModCallbacks">ModCallbacks</a></td>
+	<td class="summary">Callbacks to call functions on given events</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "ModCallbacks"></a>
+    <strong>ModCallbacks</strong>
+    </dt>
+    <dd>
+    Callbacks to call functions on given events
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">MC_NPC_UPDATE</span>
+        Triggered upon an NPC update (not every frame)
+        </li>
+        <li><span class="parameter">MC_POST_UPDATE</span>
+        Triggered upon player update (not every frame)
+        </li>
+        <li><span class="parameter">MC_POST_RENDER</span>
+        Triggered after a render finishes. Graphical rendering should be done here
+        </li>
+        <li><span class="parameter">MC_USE_ITEM</span>
+        Triggered when the player uses an Active Item (e.g. Tammy’s Head)
+        </li>
+        <li><span class="parameter">MC_POST_PEFFECT_UPDATE</span>
+        UNK
+        </li>
+        <li><span class="parameter">MC_USE_CARD</span>
+        Triggered when the player uses a card
+        </li>
+        <li><span class="parameter">MC_FAMILIAR_UPDATE</span>
+        Triggered upon a familiars update (not every frame)
+        </li>
+        <li><span class="parameter">MC_FAMILIAR_INIT</span>
+        Triggered when a familiar is constructed and initialised (effectively, upon loading a game with a familiar, or getting a new one)
+        </li>
+        <li><span class="parameter">MC_EVALUATE_CACHE</span>
+        Triggered when the cache changes. This primarily means upon stat changes
+        </li>
+        <li><span class="parameter">MC_POST_PLAYER_INIT</span>
+        Triggered after the player is constructed and initialised (Game Start)
+        </li>
+        <li><span class="parameter">MC_USE_PILL</span>
+        Triggered when the player uses a pill
+        </li>
+        <li><span class="parameter">MC_ENTITY_TAKE_DMG</span>
+        Triggered when any <a href="../classes/Entity.html#">Entity</a> takes damage
+        </li>
+        <li><span class="parameter">MC_POST_CURSE_EVAL</span>
+        Triggered after the current floors curse is decided
+        </li>
+        <li><span class="parameter">MC_INPUT_ACTION</span>
+        Triggered upon input
+        </li>
+        <li><span class="parameter">MC_LEVEL_GENERATOR</span>
+        (NOT IMPLEMENTED)
+        </li>
+        <li><span class="parameter">MC_POST_GAME_STARTED</span>
+        Triggered once the game loads, and fades in
+        </li>
+        <li><span class="parameter">MC_POST_GAME_END</span>
+        Triggered after exit to menu, should be used for saving data
+        </li>
+        <li><span class="parameter">MC_PRE_GAME_EXIT</span>
+        Triggered after exit button is pressed, but before game exits
+        </li>
+        <li><span class="parameter">MC_POST_NEW_LEVEL</span>
+        Triggered on a new <em>ROOM</em>. This is likely to change
+        </li>
+        <li><span class="parameter">MC_POST_NEW_ROOM</span>
+        (NOT IMPLEMENTED)
+        </li>
+        <li><span class="parameter">MC_GET_CARD</span>
+        Triggered after a player picks up a card
+        </li>
+        <li><span class="parameter">MC_GET_SHADER_PARAMS</span>
+        Assumedly triggered whenever a shader is called
+        </li>
+        <li><span class="parameter">MC_EXECUTE_CMD</span>
+        Triggered upon executing a debug console command
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-06-23 08:07:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
