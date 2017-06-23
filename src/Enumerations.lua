@@ -31,17 +31,21 @@ local Enumerations = {
     MC_GET_SHADER_PARAMS = 21, -- Assumedly triggered whenever a shader is called
     MC_EXECUTE_CMD = 22 -- Triggered upon executing a debug console command
   },
+
+  -------------
+  -- Represents all the usable @{Entity} types
+  -- @see Entity
   EntityType = {
-    ENTITY_NULL = 0,
+    ENTITY_NULL = 0,  -- Nothing
     ENTITY_PLAYER = 1,
     ENTITY_TEAR = 2,
     ENTITY_FAMILIAR = 3,
     ENTITY_BOMBDROP = 4,
-    ENTITY_PICKUP = 5,
-    ENTITY_SLOT = 6,
+    ENTITY_PICKUP = 5, -- Item, Coin, Card or Pill
+    ENTITY_SLOT = 6, -- Slot Machine
     ENTITY_LASER = 7,
-    ENTITY_KNIFE = 8,
-    ENTITY_PROJECTILE = 9,
+    ENTITY_KNIFE = 8, -- Mom's Knife
+    ENTITY_PROJECTILE = 9, -- Blood Projectile
     ENTITY_GAPER = 10,
     ENTITY_GUSHER = 11,
     ENTITY_HORF = 12,
@@ -250,12 +254,15 @@ local Enumerations = {
     ENTITY_SISTERS_VIS = 410,
     ENTITY_BIG_HORN = 411,
     ENTITY_DELIRIUM = 412,
-    ENTITY_EFFECT = 1000,
+    ENTITY_EFFECT = 1000,  -- Effect @{EffectVariant}
     ENTITY_TEXT = 9001
   },
+
+  ---------------
+  -- @{Entity}'s placeable using the grid system
   GridEntityType= {
-    GRID_NULL = 0,
-    GRID_DECORATION = 1,
+    GRID_NULL = 0, -- Nothing
+    GRID_DECORATION = 1, -- TODO: Add This
     GRID_ROCK = 2,
     GRID_ROCKB = 3,
     GRID_ROCKT = 4,
@@ -278,6 +285,8 @@ local Enumerations = {
     GRID_STATUE = 21,
     GRID_ROCK_SS = 22
   },
+  --------------
+  -- Variants of effects
   EffectVariant= {
     EFFECT_NULL = 0,
     BOMB_EXPLOSION = 1,
@@ -385,6 +394,9 @@ local Enumerations = {
     ULTRA_GREED_BLING = 103,
     FIREWORKS = 104
   },
+
+  -------
+  -- Pickup Variant
   PickupVariant= {
     PICKUP_NULL = 0,
     PICKUP_HEART = 10,
@@ -408,18 +420,24 @@ local Enumerations = {
     PICKUP_TROPHY = 370,
     PICKUP_BED = 380
   },
+
+  -------
+  -- Heart Types
   HeartSubType= {
     HEART_FULL = 1,
     HEART_HALF = 2,
     HEART_SOUL = 3,
     HEART_ETERNAL = 4,
-    HEART_DOUBLEPACK = 5,
+    HEART_DOUBLEPACK = 5, -- 1+1 Heart
     HEART_BLACK = 6,
     HEART_GOLDEN = 7,
     HEART_HALF_SOUL = 8,
-    HEART_SCARED = 9,
+    HEART_SCARED = 9,  -- Same as Red Hearts, but avoid the player
     HEART_BLENDED = 10
   },
+
+  --------------
+  -- Coin Types
   CoinSubType= {
     COIN_PENNY = 1,
     COIN_NICKEL = 2,
@@ -428,15 +446,25 @@ local Enumerations = {
     COIN_LUCKYPENNY = 5,
     COIN_STICKYNICKEL = 6
   },
-  KeySubType = { KEY_NORMAL = 1,
-  KEY_GOLDEN = 2,
-  KEY_DOUBLEPACK = 3,
-  KEY_CHARGED = 4 },
+
+  ----------
+  -- Key Types
+  KeySubType = {
+    KEY_NORMAL = 1,
+    KEY_GOLDEN = 2,
+    KEY_DOUBLEPACK = 3,
+    KEY_CHARGED = 4
+  },
+
+  ----------
+  -- Chest Sub Types
   ChestSubType = {
     CHEST_OPENED = 0,
     CHEST_CLOSED = 1
   },
 
+  ----------
+  -- Bomb Sub Types
   BombSubType = {
     BOMB_NORMAL = 1,
     BOMB_DOUBLEPACK = 2,
@@ -444,6 +472,9 @@ local Enumerations = {
     BOMB_GOLDEN = 4,
     BOMB_SUPERTROLL = 5
   },
+
+  -------
+  -- Price of Devil Deals/Black Market Deals
   PickupPrice = {
     PRICE_ONE_HEART = -1,
     PRICE_TWO_HEARTS = -2,
@@ -490,6 +521,7 @@ local Enumerations = {
     CHALLENGE_PONG = 35,
     NUM_CHALLENGES = 36
   },
+
   BombVariant= {
     BOMB_NORMAL = 1,
     BOMB_BIG = 1,
@@ -505,6 +537,7 @@ local Enumerations = {
     BOMB_BOBBY = 11,
     BOMB_GLITTER = 12
   },
+
   CacheFlag= {
     CACHE_DAMAGE = 1,
     CACHE_FIREDELAY = 2,
@@ -519,6 +552,7 @@ local Enumerations = {
     CACHE_LUCK = 1024,
     CACHE_ALL = 0xFFFFFFFF
   },
+
   NpcState= {
     STATE_INIT = 0,
     STATE_APPEAR = 1,
@@ -539,6 +573,7 @@ local Enumerations = {
     STATE_UNIQUE_DEATH = 16,
     STATE_DEATH = 17
   },
+
   EntityGridCollisionClass= {
     GRIDCOLL_NONE = 0,
     GRIDCOLL_WALLS_X = 1,
@@ -548,6 +583,7 @@ local Enumerations = {
     GRIDCOLL_GROUND = 5,
     GRIDCOLL_NOPITS = 6
   },
+
   EntityCollisionClass= {
     ENTCOLL_NONE = 0,
     ENTCOLL_PLAYERONLY = 1,
@@ -555,6 +591,9 @@ local Enumerations = {
     ENTCOLL_ENEMIES = 3,
     ENTCOLL_ALL = 4
   },
+
+  -------
+  -- Entity Flags
   EntityFlag= {
     FLAG_NO_STATUS_EFFECTS = 1,
     FLAG_NO_INTERPOLATE = 2,
@@ -592,6 +631,9 @@ local Enumerations = {
     FLAG_CONTAGIOUS = 8589934592,
     FLAG_BLEED_OUT = 17179869184
   },
+
+  --------
+  -- Damage types
   DamageFlag= {
     DAMAGE_NOKILL = 1,
     DAMAGE_FIRE = 2,
@@ -616,9 +658,17 @@ local Enumerations = {
     DAMAGE_CHEST = 1048576,
     DAMAGE_FAKE = 2097152
   },
-  SortingLayer= { SORTING_BACKGROUND = 0,
-  SORTING_DOOR = 1,
-  SORTING_NORMAL = 2 },
+
+  --------
+  -- Layer of sorting for Entities
+  SortingLayer = {
+    SORTING_BACKGROUND = 0, -- Background Level, behind Grid Entities (Creep, Rocks e.t.c.)
+    SORTING_DOOR = 1, -- Used by X-Ray Glasses Door animation
+    SORTING_NORMAL = 2 -- Normal layer, uses Y position to determine height
+  },
+
+  ---------
+  -- Familiars
   FamiliarVariant= {
     FAMILIAR_NULL = 0,
     BROTHER_BOBBY = 1,
@@ -730,6 +780,9 @@ local Enumerations = {
     BLOODSHOT_EYE = 116,
     MOMS_RAZOR = 117
   },
+
+  --------
+  -- Locust Subtypes
   LocustSubtypes= {
     LOCUST_OF_WRATH = 1,
     LOCUST_OF_PESTILENCE = 2,
@@ -737,13 +790,19 @@ local Enumerations = {
     LOCUST_OF_DEATH = 4,
     LOCUST_OF_CONQUEST = 5
   },
+
+  --------
+  -- Item types
   ItemType= {
-    ITEM_NULL = 0,
-    ITEM_PASSIVE = 1,
-    ITEM_TRINKET = 2,
-    ITEM_ACTIVE = 3,
-    ITEM_FAMILIAR = 4
+    ITEM_NULL = 0,  -- Nothing
+    ITEM_PASSIVE = 1, -- Passive
+    ITEM_TRINKET = 2, -- Trinket
+    ITEM_ACTIVE = 3, -- Active Item (Tammy's Head e.t.c)
+    ITEM_FAMILIAR = 4 -- Familiar
   },
+
+  --------
+  -- TODO: Work this out
   NullItemID= {
     ID_NULL = - 1,
     ID_EXPLOSIVE_DIARRHEA = 0,
@@ -788,6 +847,9 @@ local Enumerations = {
     ID_SPIDERBABY = 39,
     NUM_NULLITEMS = 40
   },
+
+  ------
+  -- Weapon types
   WeaponType= {
     WEAPON_TEARS = 1,
     WEAPON_BRIMSTONE = 2,
@@ -800,6 +862,9 @@ local Enumerations = {
     WEAPON_TECH_X = 9,
     NUM_WEAPON_TYPES = 10
   },
+
+  -------
+  -- Active Item States
   PlayerItemState= {
     ITEMSTATE_NORMAL = 0,
     ITEMSTATE_CANDLE = 1,
@@ -812,6 +877,9 @@ local Enumerations = {
     ITEMSTATE_CANNON = 8,
     ITEMSTATE_FRIENDBALL = 9
   },
+
+  -----
+  -- Layers of player sprite
   PlayerSpriteLayer= {
     SPRITE_GLOW = 0,
     SPRITE_BODY = 1,
@@ -828,6 +896,9 @@ local Enumerations = {
     SPRITE_EXTRA = 12,
     NUM_SPRITE_LAYERS = 13
   },
+
+  -------
+  -- Multiplayer Baby Sub Types
   BabySubType= {
     BABY_UNASSIGNED = - 1,
     BABY_SPIDER = 0,
@@ -889,6 +960,9 @@ local Enumerations = {
     BABY_APOLLYON = 56,
     BABY_BASIC = 57
   },
+
+  -----
+  -- Laser Offsets
   LaserOffset= {
     LASER_TECH1_OFFSET = 0,
     LASER_TECH2_OFFSET = 1,
@@ -898,6 +972,9 @@ local Enumerations = {
     LASER_MOMS_EYE_OFFSET = 5,
     LASER_TRACTOR_BEAM_OFFSET = 6
   },
+
+  --------
+  -- Not sure, may be another kind of callback
   ActionTriggers= {
     ACTIONTRIGGER_NONE = 0,
     ACTIONTRIGGER_BOMBPLACED = 1,
@@ -907,6 +984,8 @@ local Enumerations = {
     ACTIONTRIGGER_ITEMACTIVATED = 16,
     ACTIONTRIGGER_ITEMSDROPPED = 32
   },
+  -------
+  -- Collision classes for Grid Entities
   GridCollisionClass= {
     COLLISION_NONE = 0,
     COLLISION_PIT = 1,
@@ -915,6 +994,9 @@ local Enumerations = {
     COLLISION_WALL = 4,
     COLLISION_WALL_EXCEPT_PLAYER = 5
   },
+
+  -------
+  -- Player and Enemy direction
   Direction= {
     NO_DIRECTION = -1,
     LEFT = 0,
@@ -922,6 +1004,9 @@ local Enumerations = {
     RIGHT = 2,
     DOWN = 3
   },
+
+  ---------
+  -- Chapters
   LevelStage= {
     STAGE_NULL = 0,
     STAGE1_1 = 1,
@@ -945,12 +1030,18 @@ local Enumerations = {
     STAGE6_GREED = 6,
     STAGE7_GREED = 7
   },
+
+  -----------
+  -- Stage types
   StageType= {
     STAGETYPE_ORIGINAL = 0,
-    STAGETYPE_WOTL = 1,
-    STAGETYPE_AFTERBIRTH = 2,
-    STAGETYPE_GREEDMODE = 3
+    STAGETYPE_WOTL = 1, -- Stages from Wrath of The Lamb
+    STAGETYPE_AFTERBIRTH = 2, -- Stages from
+    STAGETYPE_GREEDMODE = 3 -- Stages from Greed Mode
   },
+
+  --------
+  -- Room Types
   RoomType= {
     ROOM_NULL = 0,
     ROOM_DEFAULT = 1,
@@ -970,14 +1061,17 @@ local Enumerations = {
     ROOM_ANGEL = 15,
     ROOM_DUNGEON = 16,
     ROOM_BOSSRUSH = 17,
-    ROOM_ISAACS = 18,
-    ROOM_BARREN = 19,
+    ROOM_ISAACS = 18,  -- TODO: Figure this one out
+    ROOM_BARREN = 19, -- TODO: Figure this one out
     ROOM_CHEST = 20,
     ROOM_DICE = 21,
     ROOM_BLACK_MARKET = 22,
     ROOM_GREED_EXIT = 23,
     NUM_ROOMTYPES = 24
   },
+
+  --------
+  -- Room Shapes
   RoomShape= {
     ROOMSHAPE_1x1 = 1,
     ROOMSHAPE_IH = 2,
@@ -993,6 +1087,10 @@ local Enumerations = {
     ROOMSHAPE_LBR = 12,
     NUM_ROOMSHAPES = 13
   },
+  ---------
+  -- Valid slots for doors
+  -- The values suffixed with 0 are the top row, those with a suffix of 1 are for
+  -- the 2nd row in large rooms
   DoorSlot= {
     NO_DOOR_SLOT = - 1,
     LEFT0 = 0,
@@ -1005,6 +1103,8 @@ local Enumerations = {
     DOWN1 = 7,
     NUM_DOOR_SLOTS = 8
   },
+  ---------
+  -- Curses
   LevelCurse= {
     CURSE_NONE = 0,
     CURSE_OF_DARKNESS = 1,
@@ -1016,12 +1116,15 @@ local Enumerations = {
     CURSE_OF_BLIND = 64,
     NUM_CURSES = 8
   },
+
+  ---------
+  -- Valid players
   PlayerType= {
     PLAYER_ISAAC = 0,
     PLAYER_MAGDALENA = 1,
     PLAYER_CAIN = 2,
     PLAYER_JUDAS = 3,
-    PLAYER_XXX = 4,
+    PLAYER_XXX = 4, -- ???/Blue Baby
     PLAYER_EVE = 5,
     PLAYER_SAMSON = 6,
     PLAYER_AZAZEL = 7,
@@ -1035,6 +1138,9 @@ local Enumerations = {
     PLAYER_APOLLYON = 15,
     NUM_PLAYER_TYPES = 16
   },
+
+  ------------
+  -- Player Transformations
   PlayerForm= {
     PLAYERFORM_GUPPY = 0,
     PLAYERFORM_LORD_OF_THE_FLIES = 1,
@@ -1051,6 +1157,9 @@ local Enumerations = {
     PLAYERFORM_SPIDERBABY = 12,
     NUM_PLAYER_FORMS = 13
   },
+
+  --------------
+  -- Pill Colorings
   PillColor= {
     PILL_NULL = 0,
     PILL_BLUE_BLUE = 1,
@@ -1068,6 +1177,9 @@ local Enumerations = {
     PILL_WHITE_YELLOW = 13,
     NUM_PILLS = 14
   },
+
+  -----------
+  -- Music Tracks
   Music= {
     MUSIC_NULL = 0,
     MUSIC_BASEMENT = 1,
@@ -1130,6 +1242,9 @@ local Enumerations = {
     MUSIC_VOID_BOSS = 103,
     NUM_MUSIC = 104
   },
+
+  -----------
+  -- Sound Effects
   SoundEffect= {
     SOUND_NULL = 0,
     SOUND_1UP = 1,
@@ -1437,28 +1552,41 @@ local Enumerations = {
     SOUND_BLACK_RUNE = 457,
     NUM_SOUND_EFFECTS = 458
   },
+
+  -----------
+  -- Door States
   DoorState= {
-    STATE_INIT = 0,
-    STATE_CLOSED = 1,
-    STATE_OPEN = 2,
-    STATE_ONE_CHAIN = 3,
-    STATE_HALF_CRACKED = 4
+    STATE_INIT = 0, -- Unknown
+    STATE_CLOSED = 1, -- Closed
+    STATE_OPEN = 2, -- Opened
+    STATE_ONE_CHAIN = 3, -- Half unlocked double lock door
+    STATE_HALF_CRACKED = 4  -- UNKNOWN (Anyone have any ideas?)
   },
+
+  --------------
+  -- Door Types
   DoorVariant= {
     DOOR_UNSPECIFIED = 0,
-    DOOR_LOCKED = 1,
-    DOOR_LOCKED_DOUBLE = 2,
-    DOOR_LOCKED_CRACKED = 3,
-    DOOR_LOCKED_BARRED = 4,
+    DOOR_LOCKED = 1, -- Locked
+    DOOR_LOCKED_DOUBLE = 2, -- Locked, needs 2 keys
+    DOOR_LOCKED_CRACKED = 3, -- Destroyed locked door
+    DOOR_LOCKED_BARRED = 4, -- Closed and unopenable with key
     DOOR_LOCKED_KEYFAMILIAR = 5,
-    DOOR_LOCKED_GREED = 6,
-    DOOR_HIDDEN = 7,
-    DOOR_UNLOCKED = 8
+    DOOR_LOCKED_GREED = 6, -- Barred Doors from Greed Mode
+    DOOR_HIDDEN = 7, -- Doors to Secret Rooms
+    DOOR_UNLOCKED = 8 -- Open
   },
-  Difficulty= { DIFFICULTY_NORMAL = 0,
-  DIFFICULTY_HARD = 1,
-  DIFFICULTY_GREED = 2,
-  DIFFICULTY_GREEDIER = 3 },
+
+  -------------
+  -- Difficulty levels
+  Difficulty= {
+    DIFFICULTY_NORMAL = 0,
+    DIFFICULTY_HARD = 1,
+    DIFFICULTY_GREED = 2,
+    DIFFICULTY_GREEDIER = 3
+  },
+  -------------
+  -- State of current level
   LevelStateFlag= {
     STATE_BUM_KILLED = 0,
     STATE_EVIL_BUM_KILLED = 1,
@@ -1477,6 +1605,8 @@ local Enumerations = {
     STATE_MAMA_MEGA_USED = 14,
     NUM_STATE_FLAGS = 15
   },
+  ---------------
+  -- Various game state flags
   GameStateFlag= {
     STATE_FAMINE_SPAWNED = 0,
     STATE_PESTILENCE_SPAWNED = 1,
@@ -1524,6 +1654,9 @@ local Enumerations = {
     STATE_SISTERS_VIS_SELECTED = 43,
     NUM_STATE_FLAGS = 15
   },
+
+  ------------------
+  -- Valid collectibles
   CollectibleType= {
     COLLECTIBLE_NULL = 0,
     COLLECTIBLE_SAD_ONION = 1,
@@ -2053,6 +2186,9 @@ local Enumerations = {
     COLLECTIBLE_LEPROCY = 525,
     NUM_COLLECTIBLES = 526
   },
+
+  -------------
+  -- Valid trinkets
   TrinketType= {
     TRINKET_NULL = 0,
     TRINKET_SWALLOWED_PENNY = 1,
@@ -2180,7 +2316,10 @@ local Enumerations = {
     TRINKET_FILIGREE_FEATHERS = 123,
     NUM_TRINKETS = 124
   },
-  PillEffect= {
+
+  --------------
+  -- Pill efects
+  PillEffect = {
     PILLEFFECT_NULL = - 1,
     PILLEFFECT_BAD_GAS = 0,
     PILLEFFECT_BAD_TRIP = 1,
@@ -2231,7 +2370,10 @@ local Enumerations = {
     PILLEFFECT_VURP = 46,
     NUM_PILL_EFFECTS = 47
   },
-  Card= {
+
+  -------------
+  -- Card types and names
+  Card = {
     CARD_RANDOM = - 1,
     CARD_NULL = 0,
     CARD_FOOL = 1,
@@ -2287,6 +2429,9 @@ local Enumerations = {
     CARD_HOLY = 51,
     NUM_CARDS = 52
   },
+
+  --------
+  -- Primairly visual attributes
   TearVariant= {
     BLUE = 0,
     BLOOD = 1,
@@ -2322,9 +2467,12 @@ local Enumerations = {
     NEEDLE = 31,
     BELIAL = 32
   },
+
+  ---------
+  -- Flags added to tears for various effects
   TearFlags= {
-    TEAR_NORMAL = 0,
-    TEAR_SPECTRAL = 1,
+    TEAR_NORMAL = 0, -- Normal default tear
+    TEAR_SPECTRAL = 1, -- Passes through obstacles
     TEAR_PIERCING = 2,
     TEAR_HOMING = 4,
     TEAR_SLOW = 8,
@@ -2332,8 +2480,8 @@ local Enumerations = {
     TEAR_FREEZE = 32,
     TEAR_SPLIT = 64,
     TEAR_GROW = 128,
-    TEAR_BOMBERANG = 256,
-    TEAR_PERSISTENT = 512,
+    TEAR_BOMBERANG = 256, -- Returns back, (My Reflection e.t.c.)
+    TEAR_PERSISTENT = 512, -- Continues if damage exceeds enemy health
     TEAR_WIGGLE = 1024,
     TEAR_MIGAN = 2048,
     TEAR_EXPLOSIVE = 4096,
@@ -2378,10 +2526,15 @@ local Enumerations = {
     TEAR_MIDAS = 2251799813685248,
     TEAR_NEEDLE = 4503599627370496,
     TEAR_JACOBS = 9007199254740992,
-    TEAR_HORN = 18014398509481984,
+    TEAR_HORN = 18014398509481984,  -- Little Horn tears
     TEAR_LASER = 36028797018963968,
     TEAR_LUDO = 36028797018963968
   },
+  ----------
+  -- Equivalent to the button used to trigger the mapped action
+  -- Used for the `MC_INPUT_ACTION` callback
+  -- @see ModCallbacks
+  -- @see InputHook
   ButtonAction= {
     ACTION_LEFT = 0,
     ACTION_RIGHT = 1,
@@ -2411,6 +2564,8 @@ local Enumerations = {
     ACTION_MENURT = 25,
     ACTION_MENUTAB = 26
   },
+  ---------
+  -- Mapped directly to keyboard keys
   Keyboard= {
     KEY_SPACE = 32,
     KEY_APOSTROPHE = 39,
@@ -2533,6 +2688,9 @@ local Enumerations = {
     KEY_RIGHT_SUPER = 347,
     KEY_MENU = 348
   },
+
+  -----------
+  -- Mouse buttons
   Mouse= {
     MOUSE_BUTTON_1 = 0,
     MOUSE_BUTTON_2 = 1,
@@ -2547,27 +2705,38 @@ local Enumerations = {
     MOUSE_BUTTON_RIGHT = 1,
     MOUSE_BUTTON_MIDDLE = 2
   },
-  InputHook= { IS_ACTION_PRESSED = 0,
-  IS_ACTION_TRIGGERED = 1,
-  GET_ACTION_VALUE = 2 },
+
+  ---------
+  -- Represents the reason for `MC_INPUT_ACTION` being triggered
+  -- @see ModCallbacks
+  -- @see ButtonAction
+  InputHook = {
+    IS_ACTION_PRESSED = 0,
+    IS_ACTION_TRIGGERED = 1,
+    GET_ACTION_VALUE = 2
+  },
+
+  -----------
+  -- Enumerations used by seeds. The majority of these are only
+  -- applicable to Easter Egg seeds
   SeedEffect= {
-    SEED_NORMAL = 0,
-    SEED_MOVEMENT_PITCH = 1,
-    SEED_HEALTH_PITCH = 2,
-    SEED_CAMO_ISAAC = 3,
-    SEED_CAMO_ENEMIES = 4,
-    SEED_CAMO_PICKUPS = 5,
-    SEED_CAMO_EVERYTHING = 6,
-    SEED_FART_SOUNDS = 7,
+    SEED_NORMAL = 0, -- Normal Speed
+    SEED_MOVEMENT_PITCH = 1, -- Pitch of music is affected by movement speed
+    SEED_HEALTH_PITCH = 2, -- Pitch of music is affected by level of health
+    SEED_CAMO_ISAAC = 3, -- Player is invisible
+    SEED_CAMO_ENEMIES = 4, -- All enemies are camouflaged
+    SEED_CAMO_PICKUPS = 5, -- All pickups are camouflaged
+    SEED_CAMO_EVERYTHING = 6, -- Everything is camouflaged
+    SEED_FART_SOUNDS = 7,  -- All effects replaced with Farts
     SEED_OLD_TV = 8,
-    SEED_DYSLEXIA = 9,
+    SEED_DYSLEXIA = 9,  -- All text is jumbled
     SEED_NO_HUD = 10,
     SEED_PICKUPS_SLIDE = 11,
     SEED_CONTROLS_REVERSED = 12,
     SEED_ALL_CHAMPIONS = 13,
     SEED_INVISIBLE_ISAAC = 14,
     SEED_INVISIBLE_ENEMIES = 15,
-    SEED_INFINITE_BASEMENT = 16,
+    SEED_INFINITE_BASEMENT = 16,  -- Basement repeats forever
     SEED_ALWAYS_CHARMED = 17,
     SEED_ALWAYS_CONFUSED = 18,
     SEED_ALWAYS_AFRAID = 19,
@@ -2595,7 +2764,7 @@ local Enumerations = {
     SEED_ISAAC_TAKES_HIGH_DAMAGE = 47,
     SEED_ISAAC_TAKES_MASSIVE_DAMAGE = 48,
     SEED_ICE_PHYSICS = 52,
-    SEED_KAPPA = 53,
+    SEED_KAPPA = 53,  -- Turns Isaac grey
     SEED_CHRISTMAS = 54,
     SEED_KIDS_MODE = 55,
     SEED_PERMANENT_CURSE_DARKNESS = 56,
@@ -2617,9 +2786,12 @@ local Enumerations = {
     SEED_INVINCIBLE = 73,
     SEED_SHOOT_IN_MOVEMENT_DIRECTION = 74,
     SEED_SHOOT_OPPOSITE_MOVEMENT_DIRECTION = 75,
-    SEED_AXIS_ALIGNED_CONTROLS = 76,
+    SEED_AXIS_ALIGNED_CONTROLS = 76, -- Prevents Diagonal Movement
     NUM_SEEDS = 77
   },
+
+  ------------
+  -- TODO: Work this out
   GridRooms= {
     MAX_GRID_ROOMS = 128,
     ROOM_DEVIL_IDX = -1,
@@ -2634,6 +2806,9 @@ local Enumerations = {
     NUM_OFF_GRID_ROOMS = 9,
     MAX_ROOMS = 137
   },
+
+  --------------
+  -- The various different itempools
   ItemPoolType= {
     POOL_NULL = - 1,
     POOL_TREASURE = 0,
