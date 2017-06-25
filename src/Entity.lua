@@ -1,6 +1,7 @@
 ---------------
 -- Base Class of any moving object, item, enemy, player or otherwise
 -- @author Ennis Massey
+-- @author cathery1
 -- @classmod Entity
 
 local Entity = {}
@@ -32,7 +33,7 @@ end
 function Entity:PostRender()
 end
 
---- Sends a Take Damage callback to the specified Entity with the given set of parameters. 
+--- Sends a Take Damage callback to the specified Entity with the given set of parameters.
 -- @tparam float Damage the ammount of damage the entity should take. Half a heart for each full unit of damage.
 -- @tparam integer DamageFlags the damage flags to be passed along with the hit. Each damage flag affects how the entity will take damage. See DamageFlag enum
 -- @tparam EntityRef SourceEntity the source entity that hits the victim. Convert the entity to an EntityRef first: EntityRef(ent)
@@ -67,16 +68,16 @@ end
 function Entity:MultiplyFriction(MultiplyValue)
 end
 
---- Sets the Entity's Color to the specified color. 
+--- Sets the Entity's Color to the specified color.
 -- @tparam Color Color the color to which the entity should be painted to.
 -- @tparam integer Duration the ammount of game ticks for which the color should last. Infinite if set to 0 or lower.
 -- @tparam integer Priority which color should be rendered on top of all. The lower the number the higher the priority. Appears to be ignored at 0 or lower duration.
--- @tparam boolean Fadeout if set to true, the color will slowly have faded to the original colors by the time the duration timeout is reached. 
+-- @tparam boolean Fadeout if set to true, the color will slowly have faded to the original colors by the time the duration timeout is reached.
 function Entity:SetColor(Color, Duration, Priority, Fadeout)
 end
 
 --- Returns the Entity's current Color.
--- @treturn Color Color the entity's current Color.
+-- @treturn KColor Color the entity's current Color.
 function Entity:GetColor()
 end
 
@@ -109,7 +110,7 @@ end
 function Entity:IsEnemy()
 end
 
---- Detects if the Entity is active (not a fireplace or a shopkeeper) 
+--- Detects if the Entity is active (not a fireplace or a shopkeeper)
 -- @tparam boolean IncludeDead optional - will count dead enemies as active if true
 -- @treturn boolean IsActive returns true if the enemy is active, and, if IncludeDead is NOT specified, if the enemy is not dead
 function Entity:IsActiveEnemy(IncludeDead)
