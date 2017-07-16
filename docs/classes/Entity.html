@@ -45,6 +45,9 @@
 <ul class="nowrap">
   <li><a href="../modules/Enumerations.html">Enumerations</a></li>
   <li><a href="../modules/Isaac.html">Isaac</a></li>
+  <li><a href="../modules/KColor.html">KColor</a></li>
+  <li><a href="../modules/RNG.html">RNG</a></li>
+  <li><a href="../modules/Seeds.html">Seeds</a></li>
 </ul>
 
 </div>
@@ -56,7 +59,7 @@
 <p></p>
     <h3>Info:</h3>
     <ul>
-        <li><strong>Author</strong>: Ennis Massey</li>
+        <li><strong>Author</strong>: Ennis Massey,cathery1</li>
     </ul>
 
 
@@ -64,15 +67,83 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#Entity:GetData">Entity:GetData ()</a></td>
-	<td class="summary">Returns a reference to a table that can be used to store data for an <a href="../classes/Entity.html#">Entity</a></td>
+	<td class="summary">Returns a reference to a table that is directly connected to the <a href="../classes/Entity.html#">Entity</a>.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Entity:Update">Entity:Update ()</a></td>
-	<td class="summary">Assumedly updates an Entity’s fields</td>
+	<td class="summary">Completely updates the Entity.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Entity:Render">Entity:Render (Offset)</a></td>
-	<td class="summary">Renders the <a href="../classes/Entity.html#">Entity</a> at an offset from the Entities current position</td>
+	<td class="summary">Renders the <a href="../classes/Entity.html#">Entity</a> at an offset from the Entities current position on the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:RenderShadowLayer">Entity:RenderShadowLayer (Offset)</a></td>
+	<td class="summary">Renders the Entity‘s shadow at an offset from the shadow’s current position on the screen if the entity’s animation has a shadow layer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:PostRender">Entity:PostRender ()</a></td>
+	<td class="summary">I’m unsure if it has any effect.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:TakeDamage">Entity:TakeDamage (Damage, DamageFlags, SourceEntity, DamageCountdown)</a></td>
+	<td class="summary">Sends a Take Damage callback to the specified Entity with the given set of parameters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:Kill">Entity:Kill ()</a></td>
+	<td class="summary">The entity dies, playing a death animation if it has one, and leaving a blood splat and making a death burst small sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:Die">Entity:Die ()</a></td>
+	<td class="summary">The entity dies, playing a death animation if it has one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:Remove">Entity:Remove ()</a></td>
+	<td class="summary">The entity stops existing, completely bypassing all death hooks.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:BloodExplode">Entity:BloodExplode ()</a></td>
+	<td class="summary">The entity emits the gib particles as specified in the enities2.xml.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:AddVelocity">Entity:AddVelocity (Velocity)</a></td>
+	<td class="summary">Adds to the entity’s current velocity.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:MultiplyFriction">Entity:MultiplyFriction (MultiplyValue)</a></td>
+	<td class="summary">Multiplies the Entity’s Friciton by the given ammount.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:SetColor">Entity:SetColor (Color, Duration, Priority, Fadeout)</a></td>
+	<td class="summary">Sets the Entity’s Color to the specified color.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:GetColor">Entity:GetColor ()</a></td>
+	<td class="summary">Returns the Entity’s current Color.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:SetSpriteFrame">Entity:SetSpriteFrame (AnimationName, FrameNum)</a></td>
+	<td class="summary">Sets the entity’s sprite to the current frame in the given animation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:SetSpriteOverlayFrame">Entity:SetSpriteOverlayFrame (AnimationName, FrameNum)</a></td>
+	<td class="summary">Sets the entity’s overlay sprite to the current frame in the given animation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:SetSize">Entity:SetSize (Size, SizeMulti, NumGridCollisionPoints)</a></td>
+	<td class="summary">Sets the Entity’s size parameters to the given values.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:CollidesWithGrid">Entity:CollidesWithGrid ()</a></td>
+	<td class="summary">Detects if there is a GridEntity the Entity is colliding with, obstructing its path.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:IsEnemy">Entity:IsEnemy ()</a></td>
+	<td class="summary">Detects if the Entity is an enemy (an NPC).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Entity:IsActiveEnemy">Entity:IsActiveEnemy (IncludeDead)</a></td>
+	<td class="summary">Detects if the Entity is active (not a fireplace or a shopkeeper)</td>
 	</tr>
 </table>
 
@@ -88,7 +159,7 @@
     <strong>Entity:GetData ()</strong>
     </dt>
     <dd>
-    Returns a reference to a table that can be used to store data for an <a href="../classes/Entity.html#">Entity</a>
+    Returns a reference to a table that is directly connected to the <a href="../classes/Entity.html#">Entity</a>.
 
 
 
@@ -108,7 +179,7 @@
     <strong>Entity:Update ()</strong>
     </dt>
     <dd>
-    Assumedly updates an Entity’s fields
+    Completely updates the Entity. (simulates a post update callback for that specific entity)
 
 
 
@@ -122,7 +193,7 @@
     <strong>Entity:Render (Offset)</strong>
     </dt>
     <dd>
-    Renders the <a href="../classes/Entity.html#">Entity</a> at an offset from the Entities current position
+    Renders the <a href="../classes/Entity.html#">Entity</a> at an offset from the Entities current position on the screen.
 
 
     <h3>Parameters:</h3>
@@ -138,6 +209,383 @@
 
 
 </dd>
+    <dt>
+    <a name = "Entity:RenderShadowLayer"></a>
+    <strong>Entity:RenderShadowLayer (Offset)</strong>
+    </dt>
+    <dd>
+    Renders the Entity‘s shadow at an offset from the shadow’s current position on the screen if the entity’s animation has a shadow layer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Offset</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        offset from shadow to render at
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        Success returns true if shadow was found, and is being rendered. false otherwise
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:PostRender"></a>
+    <strong>Entity:PostRender ()</strong>
+    </dt>
+    <dd>
+    I’m unsure if it has any effect.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:TakeDamage"></a>
+    <strong>Entity:TakeDamage (Damage, DamageFlags, SourceEntity, DamageCountdown)</strong>
+    </dt>
+    <dd>
+    Sends a Take Damage callback to the specified Entity with the given set of parameters.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Damage</span>
+            <span class="types"><span class="type">float</span></span>
+        the ammount of damage the entity should take. Half a heart for each full unit of damage.
+        </li>
+        <li><span class="parameter">DamageFlags</span>
+            <span class="types"><span class="type">integer</span></span>
+        the damage flags to be passed along with the hit. Each damage flag affects how the entity will take damage. See DamageFlag enum
+        </li>
+        <li><span class="parameter">SourceEntity</span>
+            <span class="types"><span class="type">EntityRef</span></span>
+        the source entity that hits the victim. Convert the entity to an EntityRef first: EntityRef(ent)
+        </li>
+        <li><span class="parameter">DamageCountdown</span>
+            <span class="types"><span class="type">integer</span></span>
+        only works if the flags contain the DamageFlag.DAMAGE<em>COUNTDOWN flag. How many ticks until the next hit containing the DAMAGE</em>COUNTDOWN flag can be received again.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        Success returns true if the entity successfully took damage. false otherwise or if it got denied in the callback.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:Kill"></a>
+    <strong>Entity:Kill ()</strong>
+    </dt>
+    <dd>
+    The entity dies, playing a death animation if it has one, and leaving a blood splat and making a death burst small sound.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:Die"></a>
+    <strong>Entity:Die ()</strong>
+    </dt>
+    <dd>
+    The entity dies, playing a death animation if it has one.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:Remove"></a>
+    <strong>Entity:Remove ()</strong>
+    </dt>
+    <dd>
+    The entity stops existing, completely bypassing all death hooks.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:BloodExplode"></a>
+    <strong>Entity:BloodExplode ()</strong>
+    </dt>
+    <dd>
+    The entity emits the gib particles as specified in the enities2.xml. this DOES NOT kill the entity.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:AddVelocity"></a>
+    <strong>Entity:AddVelocity (Velocity)</strong>
+    </dt>
+    <dd>
+    Adds to the entity’s current velocity.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Velocity</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        the velocity vector to be added to the current velocity.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:MultiplyFriction"></a>
+    <strong>Entity:MultiplyFriction (MultiplyValue)</strong>
+    </dt>
+    <dd>
+    Multiplies the Entity’s Friciton by the given ammount.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">MultiplyValue</span>
+            <span class="types"><span class="type">float</span></span>
+        the value by which the Entity’s Friction will be multiplied.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:SetColor"></a>
+    <strong>Entity:SetColor (Color, Duration, Priority, Fadeout)</strong>
+    </dt>
+    <dd>
+    Sets the Entity’s Color to the specified color.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Color</span>
+            <span class="types"><span class="type">Color</span></span>
+        the color to which the entity should be painted to.
+        </li>
+        <li><span class="parameter">Duration</span>
+            <span class="types"><span class="type">integer</span></span>
+        the ammount of game ticks for which the color should last. Infinite if set to 0 or lower.
+        </li>
+        <li><span class="parameter">Priority</span>
+            <span class="types"><span class="type">integer</span></span>
+        which color should be rendered on top of all. The lower the number the higher the priority. Appears to be ignored at 0 or lower duration.
+        </li>
+        <li><span class="parameter">Fadeout</span>
+            <span class="types"><span class="type">boolean</span></span>
+        if set to true, the color will slowly have faded to the original colors by the time the duration timeout is reached.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:GetColor"></a>
+    <strong>Entity:GetColor ()</strong>
+    </dt>
+    <dd>
+    Returns the Entity’s current Color.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">KColor</span></span>
+        Color the entity’s current Color.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:SetSpriteFrame"></a>
+    <strong>Entity:SetSpriteFrame (AnimationName, FrameNum)</strong>
+    </dt>
+    <dd>
+    Sets the entity’s sprite to the current frame in the given animation. The animation will be paused and considered finished.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">AnimationName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the animation to get the frame from
+        </li>
+        <li><span class="parameter">FrameNum</span>
+            <span class="types"><span class="type">integer</span></span>
+        the frame to set the animation to
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:SetSpriteOverlayFrame"></a>
+    <strong>Entity:SetSpriteOverlayFrame (AnimationName, FrameNum)</strong>
+    </dt>
+    <dd>
+    Sets the entity’s overlay sprite to the current frame in the given animation. The animation will be paused and considered finished.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">AnimationName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the animation to get the frame from
+        </li>
+        <li><span class="parameter">FrameNum</span>
+            <span class="types"><span class="type">integer</span></span>
+        the frame to set the animation to
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:SetSize"></a>
+    <strong>Entity:SetSize (Size, SizeMulti, NumGridCollisionPoints)</strong>
+    </dt>
+    <dd>
+    Sets the Entity’s size parameters to the given values.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Size</span>
+            <span class="types"><span class="type">float</span></span>
+        the entity’s radius at which the entities start colliding with it
+        </li>
+        <li><span class="parameter">SizeMulti</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a></span>
+        multiplies the size in both directions by the given X and Y
+        </li>
+        <li><span class="parameter">NumGridCollisionPoints</span>
+            <span class="types"><span class="type">integer</span></span>
+        the ammount of points to split the enemy collision box into for calculations with grid collision. at 4 points becomes a square, at 6 points becomes a hexagon, etc.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:CollidesWithGrid"></a>
+    <strong>Entity:CollidesWithGrid ()</strong>
+    </dt>
+    <dd>
+    Detects if there is a GridEntity the Entity is colliding with, obstructing its path.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        Collide returns true if the Entity is colliding with grid and its path is being obstructed. false otherwise
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:IsEnemy"></a>
+    <strong>Entity:IsEnemy ()</strong>
+    </dt>
+    <dd>
+    Detects if the Entity is an enemy (an NPC). Every entity with a type 10 or above and lower than 1000 is considered an NPC.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        IsEnemy returns true if the entity is an enemy. false otherwise
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Entity:IsActiveEnemy"></a>
+    <strong>Entity:IsActiveEnemy (IncludeDead)</strong>
+    </dt>
+    <dd>
+    Detects if the Entity is active (not a fireplace or a shopkeeper)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">IncludeDead</span>
+            <span class="types"><span class="type">boolean</span></span>
+        optional - will count dead enemies as active if true
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        IsActive returns true if the enemy is active, and, if IncludeDead is NOT specified, if the enemy is not dead
+    </ol>
+
+
+
+
+</dd>
 </dl>
 
 
@@ -145,7 +593,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2017-06-23 15:09:32 </i>
+<i style="float:right;">Last updated 2017-07-17 09:32:38 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

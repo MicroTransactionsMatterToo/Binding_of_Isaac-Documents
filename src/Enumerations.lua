@@ -473,6 +473,9 @@ local Enumerations = {
     BOMB_SUPERTROLL = 5
   },
 
+  ----
+  -- @type PickupPrice
+
   -------
   -- Price of Devil Deals/Black Market Deals
   PickupPrice = {
@@ -482,6 +485,12 @@ local Enumerations = {
     PRICE_FREE = -1000
   },
 
+
+  -------
+  -- @type Challenge
+
+  --------------
+  -- @table Challenge
   Challenge = {
     CHALLENGE_NULL = 0,
     CHALLENGE_PITCH_BLACK = 1,
@@ -522,6 +531,11 @@ local Enumerations = {
     NUM_CHALLENGES = 36
   },
 
+  ----
+  -- @type BombVariant
+
+  -----
+  -- @table BombVariant
   BombVariant= {
     BOMB_NORMAL = 1,
     BOMB_BIG = 1,
@@ -538,6 +552,12 @@ local Enumerations = {
     BOMB_GLITTER = 12
   },
 
+
+  ----
+  -- @type CacheFlag
+
+  ----
+  -- @table CacheFlag
   CacheFlag= {
     CACHE_DAMAGE = 1,
     CACHE_FIREDELAY = 2,
@@ -553,6 +573,11 @@ local Enumerations = {
     CACHE_ALL = 0xFFFFFFFF
   },
 
+  -----
+  -- @type NpcState
+
+  -----
+  -- @table NpcState
   NpcState= {
     STATE_INIT = 0,
     STATE_APPEAR = 1,
@@ -574,6 +599,11 @@ local Enumerations = {
     STATE_DEATH = 17
   },
 
+  -----
+  -- @type EntityGridCollisionClass
+
+  -----
+  -- @table EntityGridCollisionClass
   EntityGridCollisionClass= {
     GRIDCOLL_NONE = 0,
     GRIDCOLL_WALLS_X = 1,
@@ -584,6 +614,11 @@ local Enumerations = {
     GRIDCOLL_NOPITS = 6
   },
 
+  -----
+  -- @type EntityCollisionClass
+
+  ----
+  -- @table EntityCollisionClass
   EntityCollisionClass= {
     ENTCOLL_NONE = 0,
     ENTCOLL_PLAYERONLY = 1,
@@ -594,6 +629,10 @@ local Enumerations = {
 
   -------
   -- Entity Flags
+  -- @type EntityFlag
+
+  -------
+  -- @table EntityFlag
   EntityFlag= {
     FLAG_NO_STATUS_EFFECTS = 1,
     FLAG_NO_INTERPOLATE = 2,
@@ -634,6 +673,10 @@ local Enumerations = {
 
   --------
   -- Damage types
+  -- @type DamageFlag
+
+  ------
+  -- @table DamageFlag
   DamageFlag= {
     DAMAGE_NOKILL = 1,
     DAMAGE_FIRE = 2,
@@ -659,6 +702,10 @@ local Enumerations = {
     DAMAGE_FAKE = 2097152
   },
 
+
+  -----
+  -- @type SortingLayer
+
   --------
   -- Layer of sorting for Entities
   SortingLayer = {
@@ -666,6 +713,9 @@ local Enumerations = {
     SORTING_DOOR = 1, -- Used by X-Ray Glasses Door animation
     SORTING_NORMAL = 2 -- Normal layer, uses Y position to determine height
   },
+
+  -----
+  -- @type FamiliarVariant
 
   ---------
   -- Familiars
@@ -783,6 +833,10 @@ local Enumerations = {
 
   --------
   -- Locust Subtypes
+  -- @type LocustSubtypes
+
+  -----
+  -- @table LocustSubtypes
   LocustSubtypes= {
     LOCUST_OF_WRATH = 1,
     LOCUST_OF_PESTILENCE = 2,
@@ -793,6 +847,10 @@ local Enumerations = {
 
   --------
   -- Item types
+  -- @type ItemType
+
+  -----
+  -- @table ItemType
   ItemType= {
     ITEM_NULL = 0,  -- Nothing
     ITEM_PASSIVE = 1, -- Passive
@@ -803,6 +861,7 @@ local Enumerations = {
 
   --------
   -- TODO: Work this out
+  -- @type NullItemID
   NullItemID= {
     ID_NULL = - 1,
     ID_EXPLOSIVE_DIARRHEA = 0,
@@ -850,6 +909,10 @@ local Enumerations = {
 
   ------
   -- Weapon types
+  -- @type WeaponType
+
+  -----
+  -- @table WeaponType
   WeaponType= {
     WEAPON_TEARS = 1,
     WEAPON_BRIMSTONE = 2,
@@ -865,6 +928,10 @@ local Enumerations = {
 
   -------
   -- Active Item States
+  -- @type PlayerItemState
+
+  ----
+  -- @table PlayerItemState
   PlayerItemState= {
     ITEMSTATE_NORMAL = 0,
     ITEMSTATE_CANDLE = 1,
@@ -880,6 +947,10 @@ local Enumerations = {
 
   -----
   -- Layers of player sprite
+  -- @type PlayerSpriteLayer
+
+  -----
+  -- @table PlayerSpriteLayer
   PlayerSpriteLayer= {
     SPRITE_GLOW = 0,
     SPRITE_BODY = 1,
@@ -899,6 +970,10 @@ local Enumerations = {
 
   -------
   -- Multiplayer Baby Sub Types
+  -- @type BabySubType
+
+  ----
+  -- @table BabySubType
   BabySubType= {
     BABY_UNASSIGNED = - 1,
     BABY_SPIDER = 0,
@@ -963,6 +1038,11 @@ local Enumerations = {
 
   -----
   -- Laser Offsets
+  -- @type LaserOffset
+
+
+  ----
+  -- @table LaserOffset
   LaserOffset= {
     LASER_TECH1_OFFSET = 0,
     LASER_TECH2_OFFSET = 1,
@@ -975,6 +1055,10 @@ local Enumerations = {
 
   --------
   -- Not sure, may be another kind of callback
+  -- @type ActionTriggers
+
+  ----
+  -- @table ActionTriggers
   ActionTriggers= {
     ACTIONTRIGGER_NONE = 0,
     ACTIONTRIGGER_BOMBPLACED = 1,
@@ -984,8 +1068,13 @@ local Enumerations = {
     ACTIONTRIGGER_ITEMACTIVATED = 16,
     ACTIONTRIGGER_ITEMSDROPPED = 32
   },
+
   -------
   -- Collision classes for Grid Entities
+  -- @type GridCollisionClass
+
+  ----
+  -- @table GridCollisionClass
   GridCollisionClass= {
     COLLISION_NONE = 0,
     COLLISION_PIT = 1,
@@ -997,6 +1086,10 @@ local Enumerations = {
 
   -------
   -- Player and Enemy direction
+  -- @type Direction
+
+  -----
+  -- @table Direction
   Direction= {
     NO_DIRECTION = -1,
     LEFT = 0,
@@ -1007,6 +1100,10 @@ local Enumerations = {
 
   ---------
   -- Chapters
+  -- @type LevelStage
+
+  ----
+  -- @table LevelStage
   LevelStage= {
     STAGE_NULL = 0,
     STAGE1_1 = 1,
@@ -1033,6 +1130,10 @@ local Enumerations = {
 
   -----------
   -- Stage types
+  -- @type StageType
+
+  ----
+  -- @table StageType
   StageType= {
     STAGETYPE_ORIGINAL = 0,
     STAGETYPE_WOTL = 1, -- Stages from Wrath of The Lamb
@@ -1042,6 +1143,10 @@ local Enumerations = {
 
   --------
   -- Room Types
+  -- @type RoomType
+
+  ------
+  -- @table RoomType
   RoomType= {
     ROOM_NULL = 0,
     ROOM_DEFAULT = 1,
@@ -1072,6 +1177,10 @@ local Enumerations = {
 
   --------
   -- Room Shapes
+  -- @type RoomShape
+
+  -----
+  -- @table RoomShape
   RoomShape= {
     ROOMSHAPE_1x1 = 1,
     ROOMSHAPE_IH = 2,
@@ -1091,6 +1200,10 @@ local Enumerations = {
   -- Valid slots for doors
   -- The values suffixed with 0 are the top row, those with a suffix of 1 are for
   -- the 2nd row in large rooms
+  -- @type DoorSlot
+
+  -----
+  -- @table DoorSlot
   DoorSlot= {
     NO_DOOR_SLOT = - 1,
     LEFT0 = 0,
@@ -1103,8 +1216,13 @@ local Enumerations = {
     DOWN1 = 7,
     NUM_DOOR_SLOTS = 8
   },
+
   ---------
   -- Curses
+  -- @type LevelCurse
+
+  ------
+  -- @table LevelCurse
   LevelCurse= {
     CURSE_NONE = 0,
     CURSE_OF_DARKNESS = 1,
@@ -1119,6 +1237,10 @@ local Enumerations = {
 
   ---------
   -- Valid players
+  -- @type PlayerType
+
+  -----
+  -- @table PlayerType
   PlayerType= {
     PLAYER_ISAAC = 0,
     PLAYER_MAGDALENA = 1,
@@ -1141,6 +1263,10 @@ local Enumerations = {
 
   ------------
   -- Player Transformations
+  -- @type PlayerForm
+
+  -----
+  -- @table PlayerForm
   PlayerForm= {
     PLAYERFORM_GUPPY = 0,
     PLAYERFORM_LORD_OF_THE_FLIES = 1,
@@ -1160,6 +1286,11 @@ local Enumerations = {
 
   --------------
   -- Pill Colorings
+  -- @type PillColor
+
+
+  ----
+  -- @table PillColor
   PillColor= {
     PILL_NULL = 0,
     PILL_BLUE_BLUE = 1,
@@ -1180,6 +1311,10 @@ local Enumerations = {
 
   -----------
   -- Music Tracks
+  -- @type Music
+
+  ----
+  -- @table Music
   Music= {
     MUSIC_NULL = 0,
     MUSIC_BASEMENT = 1,
@@ -1245,6 +1380,10 @@ local Enumerations = {
 
   -----------
   -- Sound Effects
+  -- @type SoundEffect
+
+  -----
+  -- @table SoundEffect
   SoundEffect= {
     SOUND_NULL = 0,
     SOUND_1UP = 1,
@@ -1555,6 +1694,10 @@ local Enumerations = {
 
   -----------
   -- Door States
+  -- @type DoorState
+
+  -----
+  -- @table DoorState
   DoorState= {
     STATE_INIT = 0, -- Unknown
     STATE_CLOSED = 1, -- Closed
@@ -1565,6 +1708,10 @@ local Enumerations = {
 
   --------------
   -- Door Types
+  -- @type DoorVariant
+
+  -----
+  -- @table DoorVariant
   DoorVariant= {
     DOOR_UNSPECIFIED = 0,
     DOOR_LOCKED = 1, -- Locked
@@ -1579,14 +1726,23 @@ local Enumerations = {
 
   -------------
   -- Difficulty levels
+  -- @type Difficulty
+
+  -----
+  -- @table Difficulty
   Difficulty= {
     DIFFICULTY_NORMAL = 0,
     DIFFICULTY_HARD = 1,
     DIFFICULTY_GREED = 2,
     DIFFICULTY_GREEDIER = 3
   },
+
   -------------
   -- State of current level
+  -- @type LevelStateFlag
+
+  -----
+  -- @table LevelStateFlag
   LevelStateFlag= {
     STATE_BUM_KILLED = 0,
     STATE_EVIL_BUM_KILLED = 1,
@@ -1605,8 +1761,13 @@ local Enumerations = {
     STATE_MAMA_MEGA_USED = 14,
     NUM_STATE_FLAGS = 15
   },
+
   ---------------
   -- Various game state flags
+  -- @type GameStateFlag
+
+  ----
+  -- @table GameStateFlag
   GameStateFlag= {
     STATE_FAMINE_SPAWNED = 0,
     STATE_PESTILENCE_SPAWNED = 1,
@@ -1657,6 +1818,10 @@ local Enumerations = {
 
   ------------------
   -- Valid collectibles
+  -- @type CollectibleType
+
+  -----
+  -- @table CollectibleType
   CollectibleType= {
     COLLECTIBLE_NULL = 0,
     COLLECTIBLE_SAD_ONION = 1,
@@ -2189,6 +2354,10 @@ local Enumerations = {
 
   -------------
   -- Valid trinkets
+  -- @type TrinketType
+
+  -----
+  -- @table TrinketType
   TrinketType= {
     TRINKET_NULL = 0,
     TRINKET_SWALLOWED_PENNY = 1,
@@ -2319,6 +2488,10 @@ local Enumerations = {
 
   --------------
   -- Pill efects
+  -- @type PillEffect
+
+  -----
+  -- @table PillEffect
   PillEffect = {
     PILLEFFECT_NULL = - 1,
     PILLEFFECT_BAD_GAS = 0,
@@ -2373,6 +2546,10 @@ local Enumerations = {
 
   -------------
   -- Card types and names
+  -- @type Card
+
+  -----
+  -- @table Card
   Card = {
     CARD_RANDOM = - 1,
     CARD_NULL = 0,
@@ -2432,6 +2609,11 @@ local Enumerations = {
 
   --------
   -- Primairly visual attributes
+  -- @type TearVariant
+
+
+  -----
+  -- @table TearVariant
   TearVariant= {
     BLUE = 0,
     BLOOD = 1,
@@ -2470,6 +2652,10 @@ local Enumerations = {
 
   ---------
   -- Flags added to tears for various effects
+  -- @type TearFlags
+
+  -----
+  -- @table TearFlags
   TearFlags= {
     TEAR_NORMAL = 0, -- Normal default tear
     TEAR_SPECTRAL = 1, -- Passes through obstacles
@@ -2530,12 +2716,17 @@ local Enumerations = {
     TEAR_LASER = 36028797018963968,
     TEAR_LUDO = 36028797018963968
   },
+
   ----------
   -- Equivalent to the button used to trigger the mapped action
+  -- @type ButtonAction
+
+  -----
   -- Used for the `MC_INPUT_ACTION` callback
   -- @see ModCallbacks
   -- @see InputHook
-  ButtonAction= {
+  -- @table ButtonAction
+  ButtonAction = {
     ACTION_LEFT = 0,
     ACTION_RIGHT = 1,
     ACTION_UP = 2,
@@ -2564,8 +2755,13 @@ local Enumerations = {
     ACTION_MENURT = 25,
     ACTION_MENUTAB = 26
   },
+
   ---------
   -- Mapped directly to keyboard keys
+  -- @type Keyboard
+
+  -----
+  -- @table Keyboard
   Keyboard= {
     KEY_SPACE = 32,
     KEY_APOSTROPHE = 39,
@@ -2691,6 +2887,10 @@ local Enumerations = {
 
   -----------
   -- Mouse buttons
+  -- @type Mouse
+
+  -----
+  -- @table Mouse
   Mouse= {
     MOUSE_BUTTON_1 = 0,
     MOUSE_BUTTON_2 = 1,
@@ -2707,9 +2907,13 @@ local Enumerations = {
   },
 
   ---------
+  -- @type InputHook
+
+  ------
   -- Represents the reason for `MC_INPUT_ACTION` being triggered
   -- @see ModCallbacks
   -- @see ButtonAction
+  -- @table InputHook
   InputHook = {
     IS_ACTION_PRESSED = 0,
     IS_ACTION_TRIGGERED = 1,
@@ -2717,9 +2921,13 @@ local Enumerations = {
   },
 
   -----------
+  -- @type SeedEffect
+
+  -----
   -- Enumerations used by seeds. The majority of these are only
   -- applicable to Easter Egg seeds
-  SeedEffect= {
+  -- @table SeedEffect
+  SeedEffect = {
     SEED_NORMAL = 0, -- Normal Speed
     SEED_MOVEMENT_PITCH = 1, -- Pitch of music is affected by movement speed
     SEED_HEALTH_PITCH = 2, -- Pitch of music is affected by level of health
@@ -2792,7 +3000,7 @@ local Enumerations = {
 
   ------------
   -- TODO: Work this out
-  GridRooms= {
+  GridRooms = {
     MAX_GRID_ROOMS = 128,
     ROOM_DEVIL_IDX = -1,
     ROOM_ERROR_IDX = -2,
@@ -2808,7 +3016,11 @@ local Enumerations = {
   },
 
   --------------
+  -- @type ItemPoolType
+
+  -----
   -- The various different itempools
+  -- @table ItemPoolType
   ItemPoolType= {
     POOL_NULL = - 1,
     POOL_TREASURE = 0,

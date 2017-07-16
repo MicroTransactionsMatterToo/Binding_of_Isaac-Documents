@@ -48,7 +48,7 @@ function RNG:RandomInt(Max) end
 
 
 --- Sets the seed to use for the next RNG
--- Both parameters seem to affect the RNG, but I'm not sure how @{ShiftIdx}
+-- Both parameters seem to affect the RNG, but I'm not sure how `ShiftIdx`
 -- functions
 -- @tparam integer Seed Value for RNG seeding
 -- @tparam integer ShiftIdx Unknown. Will crash game if negative

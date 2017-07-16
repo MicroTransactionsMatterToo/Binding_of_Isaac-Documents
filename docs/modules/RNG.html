@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Enumerations.html">Enumerations</a></li>
+  <li><a href="../modules/Isaac.html">Isaac</a></li>
+  <li><a href="../modules/KColor.html">KColor</a></li>
+  <li><strong>RNG</strong></li>
+  <li><a href="../modules/Seeds.html">Seeds</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Entity.html">Entity</a></li>
+  <li><a href="../classes/Vector.html">Vector</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>RNG</code></h1>
+<p>Provides Random Number Generation Calling RNG() will always give back an instance with the same starting seed <strong>NOTE</strong> If functions are called as such <code>RNG():FuncName</code>, there will be no randomisation.</p>
+<p>Ensure you always assign a variable with the return value of <code>RNG()</code></p>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">-- Creating a new RNG instance
+ local newRNG = RNG()
+</pre>
+    </ul>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Author</strong>: Ennis Massey</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#__call">__call ()</a></td>
+	<td class="summary">Constructor metamethod Constructs a new RNG instance</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetSeed">GetSeed ()</a></td>
+	<td class="summary">Gets the Seed used for RNG <strong>NOTE</strong> This is not the GAME seed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Next">Next ()</a></td>
+	<td class="summary">Function unknown, appears to return another seed value Likely used for multiple random number generations</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RandomFloat">RandomFloat ()</a></td>
+	<td class="summary">Returns a float between 0.0 and 1.0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RandomInt">RandomInt (Max)</a></td>
+	<td class="summary">Returns an integer between 0 and Max (exclusive) the RNG seed is changed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetSeed">SetSeed (Seed, ShiftIdx)</a></td>
+	<td class="summary">Sets the seed to use for the next RNG Both parameters seem to affect the RNG, but I’m not sure how <code>ShiftIdx</code> functions</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "__call"></a>
+    <strong>__call ()</strong>
+    </dt>
+    <dd>
+    Constructor metamethod Constructs a new RNG instance
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> newRNGInst = RNG()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "GetSeed"></a>
+    <strong>GetSeed ()</strong>
+    </dt>
+    <dd>
+    Gets the Seed used for RNG <strong>NOTE</strong> This is not the GAME seed. It is unrelated to item, room and stage generation
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span></span>
+        Seed used for RNG
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> newRNGInst = RNG()
+ <span class="keyword">local</span> rngSeed = newRNGInst:GetSeed()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Next"></a>
+    <strong>Next ()</strong>
+    </dt>
+    <dd>
+    Function unknown, appears to return another seed value Likely used for multiple random number generations
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        Another seed?
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RandomFloat"></a>
+    <strong>RandomFloat ()</strong>
+    </dt>
+    <dd>
+    Returns a float between 0.0 and 1.0
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">float</span></span>
+        random float
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> rng = RNG()
+ <span class="keyword">local</span> randomFloat = rng:RandomFloat()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "RandomInt"></a>
+    <strong>RandomInt (Max)</strong>
+    </dt>
+    <dd>
+    Returns an integer between 0 and Max (exclusive) the RNG seed is changed. If the Max is a negative number, it will return an unbound random integer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Max</span>
+            <span class="types"><span class="type">integer</span></span>
+        maximum value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span></span>
+        Random number between 0 and Max
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SetSeed"></a>
+    <strong>SetSeed (Seed, ShiftIdx)</strong>
+    </dt>
+    <dd>
+    Sets the seed to use for the next RNG Both parameters seem to affect the RNG, but I’m not sure how <code>ShiftIdx</code> functions
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Seed</span>
+            <span class="types"><span class="type">integer</span></span>
+        Value for RNG seeding
+        </li>
+        <li><span class="parameter">ShiftIdx</span>
+            <span class="types"><span class="type">integer</span></span>
+        Unknown. Will crash game if negative
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-07-17 09:32:38 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
